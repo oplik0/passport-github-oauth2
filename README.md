@@ -1,4 +1,4 @@
-# passport-github-oauth200
+# passport-github-oauth20
 
 [Passport](http://passportjs.org/) strategy for authenticating with [GitHub](http://www.github.com/)
 using the OAuth 2.0 API. This package is heavily based on [passport-google-oauth20](https://www.npmjs.com/package/passport-google-oauth20) package

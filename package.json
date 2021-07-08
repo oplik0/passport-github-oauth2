@@ -1,0 +1,45 @@
+{
+    "name": "passport-github-oauth2",
+    "version": "1.0.0",
+    "description": "GitHub (OAuth 2.0) authentication strategy for Passport.",
+    "keywords": [
+        "passport",
+        "github",
+        "auth",
+        "authn",
+        "authentication",
+        "identity"
+    ],
+    "author": {
+        "name": "oplik0",
+        "email": "opliko.reg@protonmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/oplik0/passport-github-oauth2.git"
+    },
+    "bugs": {
+        "url": "http://github.com/oplik0/passport-github-oauth2/issues"
+    },
+    "license": "MIT",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "main": "./lib",
+    "dependencies": {
+        "@octokit/core": "^3.5.1",
+        "passport-oauth2": "^1.5.0"
+    },
+    "devDependencies": {
+        "prettier": "^2.3.2"
+    },
+    "engines": {
+        "node": ">= 14.0.0"
+    },
+    "scripts": {
+        "format": "prettier -w ."
+    }
+}

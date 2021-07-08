@@ -53,12 +53,13 @@ jobs:
           version: 6.9.0
           run_install: true
       - name: create .npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > /home/runner/work/_temp/.npmrc
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
         shell: bash
-      - run: pnpm publish
+      - run: pnpm publish --no-git-checks
         env:
+          NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
   publish-gpr:
@@ -87,10 +88,11 @@ jobs:
           version: 6.9.0
           run_install: true
       - name: create .npmrc
-        run: echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" > /home/runner/work/_temp/.npmrc
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         shell: bash
-      - run: pnpm publish --no-git-checks --access public
+      - run: pnpm publish --no-git-checks
         env:
+          NPM_CONFIG_USERCONFIG: /home/runner/work/_temp/.npmrc
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

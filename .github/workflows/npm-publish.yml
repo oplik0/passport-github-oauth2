@@ -27,8 +27,7 @@ jobs:
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 6.9.0
-          run_install: |
-            - args: [--frozen-lockfile]
+          run_install: true
       - run: pnpm test
 
   publish-npm:
@@ -52,8 +51,7 @@ jobs:
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 6.9.0
-          run_install: |
-            - args: [--frozen-lockfile]
+          run_install: true
       - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
@@ -82,8 +80,7 @@ jobs:
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 6.9.0
-          run_install: |
-            - args: [--frozen-lockfile]
+          run_install: true
       - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

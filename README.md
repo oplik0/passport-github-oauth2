@@ -1,4 +1,4 @@
-# passport-github-oauth20
+# passport-github-oauth200
 
 [Passport](http://passportjs.org/) strategy for authenticating with [GitHub](http://www.github.com/)
 using the OAuth 2.0 API. This package is heavily based on [passport-google-oauth20](https://www.npmjs.com/package/passport-google-oauth20) package
@@ -11,19 +11,19 @@ unobtrusively integrated into any application or framework that supports
 
 ---
 
-[![npm](https://img.shields.io/npm/v/passport-github-oauth2.svg)](https://www.npmjs.com/package/passport-github-oauth2)
+[![npm](https://img.shields.io/npm/v/passport-github-oauth20.svg)](https://www.npmjs.com/package/passport-github-oauth20)
 
 ## Install
 
 ```bash
-$ npm install passport-github-oauth2
+$ npm install passport-github-oauth20
 ```
 
 ## Usage
 
 #### Create an Application
 
-Before using `passport-github-oauth2`, you must register an application with
+Before using `passport-github-oauth20`, you must register an application with
 GitHub. If you have not already done so, a oauth app has to be created in
 [Developers settings](https://github.com/settings/developers).
 Your application will be issued a client ID and client secret, which need to be
@@ -41,7 +41,7 @@ GitHub profile. The `verify` callback must call `cb` providing a user to
 complete authentication.
 
 ```javascript
-var GitHubStrategy = require("passport-github-oauth2").Strategy;
+var GitHubStrategy = require("passport-github-oauth20").Strategy;
 
 passport.use(
   new GitHubStrategy(

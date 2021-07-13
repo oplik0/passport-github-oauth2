@@ -1,6 +1,6 @@
 {
     "name": "passport-github-oauth20",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "GitHub (OAuth 2.0) authentication strategy for Passport.",
     "keywords": [
         "passport",
